@@ -1,0 +1,17 @@
+.am-navbar {
+  position: sticky;
+  width: 100%;
+  height: auto;
+  top: 0;
+}
+
+.am-navbar-left {
+  flex: 0 0;
+}
+
+.am-navbar-title {
+  justify-content: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

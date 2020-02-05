@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import Root from './Root'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,9 +9,11 @@ class App extends React.Component {
     }
   }
 
-  render(h) {
+  render() {
     return (
-      <h1>Tes</h1>
+      <div>
+        <Root></Root>
+      </div>
     )
   }
 }
