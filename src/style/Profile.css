@@ -1,0 +1,15 @@
+.am-navbar {
+  position: sticky;
+  width: 100%;
+  height: auto;
+  top: 0;
+  z-index: 20;
+}
+
+.am-navbar-left {
+  padding: 0px;
+}
+
+.row-profile {
+  text-align: center;
+}

@@ -276,47 +276,6 @@ class TimeLine extends React.Component {
             </p>
         </WingBlank>
         {/* TIMELINE */}
-        
-        {/* FOOTER */}
-        <div
-          style={{
-            borderTop: '2px solid rgba(0,0,0,0.2)',
-            zIndex: '20',
-            position: 'sticky',
-            height: 'auto',
-            bottom: 0,
-            backgroundColor: 'white',
-            padding: '10px 0px'
-          }}
-        >
-          <Flex>
-            <Flex.Item className="flex-footer">
-              <IconAntd 
-              type="home"
-              className="icon-time-line"
-              ></IconAntd>
-            </Flex.Item>
-            <Flex.Item className="flex-footer">
-              <IconAntd 
-              type="search"
-              className="icon-time-line"
-              ></IconAntd>
-            </Flex.Item>
-            <Flex.Item className="flex-footer">
-              <i className="far fa-plus-square icon-time-line"></i>
-            </Flex.Item>
-            <Flex.Item className="flex-footer">
-              <i className="far fa-heart icon-time-line"></i>
-            </Flex.Item>
-            <Flex.Item className="flex-footer">
-              <IconAntd 
-              type="user"
-              className="icon-time-line"
-              ></IconAntd>
-            </Flex.Item>
-          </Flex>
-        </div>
-        {/* FOOTER */}
       </div>
     )
   }
