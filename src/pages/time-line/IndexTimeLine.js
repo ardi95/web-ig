@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer';
 import { withRouter } from 'react-router-dom'
 
 import '../../style/TimeLine.css'
@@ -276,6 +277,8 @@ class TimeLine extends React.Component {
             </p>
         </WingBlank>
         {/* TIMELINE */}
+
+        <Footer></Footer>
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import {
   Icon as IconAntd
 } from 'antd'
@@ -11,6 +12,11 @@ import 'antd/dist/antd.css';
 import '../style/Footer.css'
 
 class Footer extends React.Component {
+
+  linkFooter = url => {
+    this.props.history.push(url)
+  }
+
   render() {
     return (
       <div
@@ -26,7 +32,9 @@ class Footer extends React.Component {
         }}
       >
         <Flex>
-          <Flex.Item className="flex-footer">
+          <Flex.Item
+          onClick={() => this.linkFooter("time-line")}
+          className="flex-footer">
             <IconAntd 
             type="home"
             className="icon-time-line"
@@ -44,7 +52,9 @@ class Footer extends React.Component {
           <Flex.Item className="flex-footer">
             <i className="far fa-heart icon-time-line"></i>
           </Flex.Item>
-          <Flex.Item className="flex-footer">
+          <Flex.Item 
+          onClick={() => this.linkFooter("profile")}
+          className="flex-footer">
             <IconAntd 
             type="user"
             className="icon-time-line"
@@ -56,4 +66,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer
+export default withRouter(Footer)

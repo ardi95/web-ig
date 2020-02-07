@@ -1,17 +1,41 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 
 import 'antd-mobile/dist/antd-mobile.css'
 import { 
   WingBlank,
   WhiteSpace,
-  InputItem,
+  // InputItem,
   Button
 } from 'antd-mobile'
 
+import {
+  Input
+} from 'antd'
+
+import 'antd/dist/antd.css';
 import '../style/Login.css'
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  submit = () => {
+    if (this.state.email === 'ardi@aranproduk.com' && this.state.password === 'rahasia') {
+      this.props.history.push('time-line')
+    }
+  }
+
   render() {
     return (
       <div style={{ 
@@ -26,20 +50,29 @@ class Login extends React.Component {
 
           <WhiteSpace></WhiteSpace>
 
-          <InputItem
+          <Input
+            name="email"
             placeholder="Nomor telpon, email, atau nama pengguna"
-          ></InputItem>
+            value={this.state.email}
+            onChange={this.handleChange}
+          ></Input>
 
           <WhiteSpace></WhiteSpace>
 
-          <InputItem
+          <Input
             type="password"
-            placeholder="Nomor telpon, email, atau nama pengguna"
-          ></InputItem>
+            name="password"
+            placeholder="Kata Sandi"
+            value={this.state.password}
+            onChange={this.handleChange}
+          ></Input>
 
           <WhiteSpace></WhiteSpace>
           
-          <Button type="primary" disabled>Masuk</Button>
+          <Button 
+          type="primary"
+          disabled={this.state.email === '' || this.state.password === ''}
+          onClick={this.submit}>Masuk</Button>
         </WingBlank>
 
         <hr 
@@ -55,4 +88,4 @@ class Login extends React.Component {
   }
 }
 
-export default withRouter(Login)
+export default Login

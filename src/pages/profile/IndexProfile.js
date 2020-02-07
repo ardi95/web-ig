@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer';
 import {
   // WingBlank,
   Icon,
@@ -212,6 +213,8 @@ class Profile extends React.Component {
           </div>
         </Tabs>
         {/* PHOTO */}
+
+        <Footer></Footer>
       </div>
     )
   }
